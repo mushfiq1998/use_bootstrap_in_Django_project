@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="eng">
+    <head>
+        <meta charset="UTF8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> {% block title %} Default title{% endblock title %} </title>
+        <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'core/css/all.min.css' %}">
+        {% block corecss %}
+            <link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+        {% endblock corecss %}
+    </head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Django</li>
+        </ul>
+    </nav>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+
+<i class="fa fa-eye" aria-hidden="true"></i>
+
+{% block content %} {% endblock content %} 
+
+{% block img %} 
+<img src="{% static 'core/images/gp.png' %}" alt="Django" />
+{% endblock img %}
+
+<hr />
+<form action="">
+    <input type="button" value="Click me" onclick="display()">
+</form>
+<script src="{% static 'core/js/all.js' %}"></script>
+
+<script src="{% static 'core/js/bootstrap.js' %}"></script>
+<script src="{% static 'core/js/jquery.js' %}"></script>
+<script src="{% static 'core/js/proper.js' %}"></script>
+<script src="{% static 'core/js/all.min.js' %}"></script>
+
+</body>
+</html>
